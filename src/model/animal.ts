@@ -1,5 +1,5 @@
-class animal {
-    class Animal{
+
+class Animal{
         private nome: string;
         private idade: number;
         private genero: string;
@@ -63,4 +63,3 @@ class animal {
             this.genero = _genero;
         }
     }
-}
