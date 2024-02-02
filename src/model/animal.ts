@@ -1,5 +1,4 @@
-
-class Animal{
+export class Animal{
         private nome: string;
         private idade: number;
         private genero: string;
@@ -10,9 +9,9 @@ class Animal{
             this.genero = _genero;
         }
          /**
-         * Retorna o nome da pessoa
+         * Retorna o nome do animal
          *
-         * @returns nome : nome da pessoa
+         * @returns nome : nome do animal
          */
         public getNome(): string {
             return this.nome;
@@ -21,16 +20,16 @@ class Animal{
         /**
          * Atribui o parâmetro ao atributo nome
          *
-         * @param _nome : nome da pessoa
+         * @param _nome : nome do animal
          */
         public setNome(_nome: string): void {
             this.nome = _nome;
         }
     
         /**
-         * Retorna a idade da pessoa
+         * Retorna a idade do animal
          *
-         * @returns idade : idade da pessoa
+         * @returns idade : idade do animal
          */
         public getIdade(): number {
             return this.idade;
@@ -39,16 +38,16 @@ class Animal{
         /**
          * Atribui o parâmetro ao atributo idade
          *
-         * @param _idade : idade da pessoa
+         * @param _idade : idade do animal
          */
         public setIdade(_idade: number): void {
             this.idade = _idade;
         }
     
         /**
-         * Retorna o gênero da pessoa
+         * Retorna o gênero do animal
          *
-         * @returns genero : gênero da pessoa
+         * @returns genero : gênero do animal
          */
         public getGenero(): string {
             return this.genero;
@@ -57,7 +56,7 @@ class Animal{
         /**
          * Atribui o parâmetro ao atributo genero
          *
-         * @param _genero : gênero da pessoa
+         * @param _genero : gênero do animal
          */
         public setGenero(_genero: string): void {
             this.genero = _genero;
