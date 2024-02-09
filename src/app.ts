@@ -3,6 +3,8 @@ import cors from 'cors';
 import { Ave } from './model/Ave';
 import { Mamifero } from './model/Mamifero';
 import { Reptil } from './model/Reptil';
+import { Atracao } from './model/Atracao';
+import { zoologico } from './model/Zoologico';
 
 const port: number = 3000;
 
@@ -23,6 +25,21 @@ server.post('/ave', (req, res) => {
     const { nome, idade, genero, envergadura } = req.body;
     let ave: Ave = new Ave(nome, idade, genero, envergadura);
     res.json(["A nova ave do zoológico é ", ave]);
+})
+
+
+server.post('/atracao', (req, res)=>{
+    const { nome, habitat } = req.body;
+    const atracao = new Atracao(nome, habitat);
+    console.log(atracao);
+    res.status(200).json('Atração criado')
+})
+
+server.post('/zoologico', (req, res)=>{
+    const { nome, atracao } = req.body;
+    const zoo = new zoologico(nome, atracao);
+    console.log(zoo);
+    res.status(200).json('Zoologico criado')
 })
 
 server.listen(port, () => {
